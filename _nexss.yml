@@ -4,5 +4,5 @@ input: null
 data: null
 files:
   - name: src/my.py
-    compiler: blender nexsstest.blend --background
+    compiler: blender src/nexsstest.blend --background
   # compiler: blender nexsstest.blend --background --debug-wm
