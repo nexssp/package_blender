@@ -12,19 +12,8 @@ from pprint import pprint
 NexssStdin = sys.stdin.read()
 
 parsedJson = json.loads(NexssStdin)
-# Modify Data
-# parsedJson["PythonOutput"] = "Hello from Python! " + \
-#     str(platform.python_version())
-
-# parsedJson["test"] = "test"
-
-# bpy.ops.mesh.primitive_cylinder_add(radius = 0.5, depth = 1)
-# ob = bpy.context.object
-# me = ob.data
-# ob.name = 'myname'
 
 from bpy import context
-
 scene = bpy.context.scene
 # foo_objs = [obj for obj in scene.objects if obj.name.startswith("foo")]
 # Active object / or last added object
@@ -34,7 +23,12 @@ pprint(bpy.context.scene.objects)
 
 from datetime import datetime
 now = datetime.now()
-bpy.data.objects["NEXSSEDIT"].data.body = now.strftime("%d/%m/%Y %H:%M:%S")
+
+editObjectName = "NEXSSEDIT"
+if "objectName" in parsedJson.keys():
+    editObjectName = parsedJson["objectName"]
+
+bpy.data.objects[editObjectName].data.body = now.strftime("%d/%m/%Y %H:%M:%S")
 
 parsedJson["file"] = os.path.join(parsedJson["cwd"],'test2.jpg')
 bpy.data.scenes['Scene'].render.filepath = parsedJson["file"] 
