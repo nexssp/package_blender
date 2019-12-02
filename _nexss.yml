@@ -1,8 +1,7 @@
 name: Blender
+author: Marcin Polak mapoart@gmail.com
 debug: true
-input: null
-data: null
 files:
-  - name: src/my.py
+  - name: src/nexssBlender.py
     compiler: blender src/nexsstest.blend --background
   # compiler: blender nexsstest.blend --background --debug-wm

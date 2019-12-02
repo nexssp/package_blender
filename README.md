@@ -1,13 +1,32 @@
 # Blender Nexss PROGRAMMER package
 
-You can render you results directly from nexss PROGRAMMER in blender.
+You can render results in **Blender** directly from **nexss PROGRAMMER**.
 
-To run script in blender make compiler option: blender eg
+## Parameters
+
+- width
+- height
+- objectName - Name of object in the scene to modify
+- renderData - String which contains data to render, otherwise it contains datetime stamp.
+- renderFilename
+- colorMode [‘BW’, ‘RGB’, ‘RGBA’]
+- compression (0-100)
+
+more here: [Blender image format settings](https://docs.blender.org/api/blender_python_api_master/bpy.types.ImageFormatSettings.html?highlight=compression#bpy.types.ImageFormatSettings.compression)
+
+## Create custom Scene
+
+1. Create new scene and save it as eg. myfile.blend
+2. Create eg. Text Object and rename it to NEXSSEDIT or you need to pass parameter of objectName.
+
+## Config file
+
+To run your python script in blender make compiler option with scene file: blender eg
 
 ```yml
 files:
-  - name: src/my.py
-    compiler: blender nexsstest.blend --background
+  - name: src/yourScript.py
+    compiler: blender yourBlenderScene.blend --background
 ```
 
 ## Modify code to your needs
@@ -41,7 +60,7 @@ Execute script
 
 ```sh
 # nexss
-# NORE: Blender render does not allow for custom arguments, you need to pass it through pipe eg. or in _nexss.yml in data section.
+# NORE: Blender render does not allow for custom arguments (-- but for now it is not implemented in nexss PROGRAMMER), you need to pass it through pipe eg. or in _nexss.yml in data section.
 
 echo {"ObjectName": "NexssEdit"} | nexss Blender
 
