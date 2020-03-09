@@ -2,6 +2,23 @@
 
 You can render results in **Blender** directly from **nexss PROGRAMMER**.
 
+## Start Scripting in Blender
+
+- Enable Python Tooltips -> Edit -> Preferences -> Interface -> [Display] Python Tooltip
+- Info Panel shows history of commands executed
+- CTRL + T - shows properties
+- ALT + P run Script on active text-editor
+
+## Examples
+
+```sh
+nexss .\my.py --nxsCompiler="blender --background"
+```
+
+## Links
+
+[2.8 vs 2.7](https://wiki.blender.org/wiki/Reference/Release_Notes/2.80/Python_API/Scene_and_Object_API)
+
 ## Parameters
 
 - width
