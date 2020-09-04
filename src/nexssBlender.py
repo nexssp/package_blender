@@ -1,4 +1,5 @@
-# Nexss PROGRAMMER 2.0.0 - Python3
+# nexss-compiler: blender --background
+# Nexss PROGRAMMER 2.x
 # Render results in Blender 3D
 
 from datetime import datetime
