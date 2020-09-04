@@ -1,4 +1,4 @@
-# nexss-compiler: blender --background
+# nexss-compiler: blender src/nexsstest.blend --background
 # Nexss PROGRAMMER 2.x
 # Render results in Blender 3D
 
