@@ -6,4 +6,4 @@ files:
     compiler: blender src/nexsstest.blend -E CYCLES --background -noaudio # EEvE is not supported without display, use cycles
   # compiler: blender nexsstest.blend --background --debug-wm
 errors:
-  "Unable to open a display": "If you are using Blender without display/open gl you need to add `-E cycles -noaudio` to your compiler settings. more here: https://github.com/nexssp/cli/wiki/Languages#set-compiler-per-file"
+  "Unable to open a display": "If you are using Blender without display/open gl you need to add `-E CYCLES -noaudio` to your compiler settings. more here: https://github.com/nexssp/cli/wiki/Languages#set-compiler-per-file"
