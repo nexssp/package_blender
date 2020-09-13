@@ -1,5 +1,8 @@
 # Blender Nexss PROGRAMMER package
 
+Note:
+IF you wish to render in EEVEE you must render it with display/OpenGL
+
 You can render results in **Blender** directly from **nexss PROGRAMMER**.
 
 ## Start Scripting in Blender
